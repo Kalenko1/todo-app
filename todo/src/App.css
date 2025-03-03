@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sedgwick+Ave+Display&display=swap" );
+
+.App {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url('./../src/image/image1.jpg');  /* Tvoja pozadinska slika */
+  background-size: cover;  /* Slika će pokriti celu pozadinu */
+  background-position: center;  /* Slika će biti centrirana */
+  background-repeat: no-repeat;  /* Slika se neće ponavljati */
+  border-radius: 8px;
+  height: 100vh;  /* Podesi visinu na celoj visini ekrana */
+}
+.task-checkbox {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.task-text {
+  flex-grow: 1;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.task-text:hover {
+  color: #AC7B3F;
+}
+
+.delete-button {
+  background-color: #AC7B3F;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.delete-button:hover {
+  background-color: #45a049;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.completed .task-text {
+  text-decoration: line-through;
+  color: grey;
+}
+
+h1 {
+  font-family: Courgette, sans-serif;
+  color: #AC7B3F;
+  margin-left: 50px;
+  font-size: min(10vw, 36px); /* Povećaj font sa viewport veličinom, ali sa minimalnom vrednošću od 36px */
+}
+
+input {
+  padding: 10px;
+  width: 80%;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #AC7B3F;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50%; /* Dugme u obliku kruga */
+  position: relative;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+li {
+  background-color: rgba(255, 255, 255, 0.8);  /* Poluprovidna bela pozadina za bolji kontrast */
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Poravnaj checkbox, tekst i dugme vertikalno */
+}
+
+.checkbox {
+  margin-right: 10px;  /* Razmak između checkbox-a i teksta */
+}
+
+/* Precrtavanje za završen zadatak */
+.completed {
+  color: grey;
+  text-decoration: line-through;
+}
+
+/* Dugme za brisanje */
+button {
+  background-color: #AC7B3F;
+  padding: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50%;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .App {
+    max-width: 70%;  /* Širina je 100% na manjim ekranima */
+    padding: 10px;
+  }
+
+  input {
+    width: 70%;  /* Ulazna polja su uža na manjim ekranima */
+  }
+
+  button {
+    font-size: 14px; /* Manja dugmadi za mobilne uređaje */
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+    padding: 10px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
